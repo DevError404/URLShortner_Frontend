@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(//fonts.googleapis.com/css?family=Quicksand);
+
+html,body{
+	font-family:  Quicksand, helvetica;
+    font-size: 100%;
+    overflow-x: hidden;
+    background: url('./assets/images/globe-bg.jpg') no-repeat ;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-attachment: fixed;
+}

@@ -1,0 +1,38 @@
+<simple-notifications [options] = "options"></simple-notifications>
+<ngx-spinner
+  bdColor = "rgba(51, 51, 51, 0.8)"
+size = "default"
+color = "#fff"
+type = "line-spin-clockwise-fade-rotating"
+>
+</ngx-spinner>
+<h1 class="title "><strong>URL Shortener</strong></h1>
+<hr/>
+<p>Type or Paste your URL below to get custom Short URL.</p>
+<div class="container-fluid custom-container center-block">
+    <div class="row">
+        <div class="col-12 card-center">
+            <div class="custom-card card w-50">
+                <div class="card-block">
+                     <!-- <form>  -->
+                    <div class="input-group mb-5 ">
+                       
+                        <input 
+                            type="text" 
+                            class="form-control col-sm-12" 
+                            [(ngModel)] = "originalUrl" 
+                            placeholder="e.g. google.com" 
+                            aria-label="URL" 
+                            pattern="^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/$"
+                            aria-describedby="basic-addon2" autofocus>
+                        <div class="input-group-append bg-primary">
+                            <button type="submit" (click)="getShortenedUrl();" class="input-group-text bg-primary text-white btn " id="basic-addon2">Shorten</button>
+                        </div>
+                    </div>
+                    <!-- </form> -->
+                    <p class="card-text" *ngIf="isUrlShortened">Your URL is <a target="_blank" href={{shortenedUrl}}>{{shortenedUrl}}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
